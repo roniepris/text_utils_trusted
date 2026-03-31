@@ -93,6 +93,9 @@ jobs:
 
     # Executa somente quando uma release é publicada
     if: github.event_name == 'release'
+    
+    permissions:
+      id-token: write  # necessário para Trusted Publishing
 
     steps:
       - name: Baixar artefatos
